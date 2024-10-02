@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(249, 237, 222);
+  background-image: url("./chilling.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.container {
+  width: 450px;
+  margin: 140px auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.desc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+
+.desc .title {
+    color: orange;
+}
+
+.new-task-holder {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+}
+.new-task-holder #new-task {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+  font-size: medium;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+
+.new-task-holder #new-task-btn {
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.tasks-holder {
+    max-height: 200px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+/* hr {
+    width: 95%;
+    margin-top: 0;
+    margin-bottom: 0;
+} */
+#tasks {
+  list-style: none;
+  padding: 10px 10px;
+}
+
+.task {
+    padding: 5px 0px;
+}
+.task label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #555;
+    border-radius: 50%; /* Makes it a circle */
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle; /* Aligns with the label text */
+    margin-right: 5px; /* Space between checkbox and label */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transition effects */
+    opacity: 1; /* Start fully visible */
+}
+
+/* Custom style when checked */
+input[type="checkbox"]:checked {
+    background-color: black;
+    opacity: 1;
+    -webkit-transition: 0.5s;
+}
+
+/* Add a dot inside when checked */
+input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
